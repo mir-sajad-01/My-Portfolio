@@ -1,16 +1,100 @@
-# React + Vite
+# 🚀 My Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive personal portfolio website built with **React.js** and **Tailwind CSS**, designed to showcase my skills, projects, and achievements in a clean and professional way.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- ⚡ Fast and optimized with Vite
+- 📱 Fully responsive on all screen sizes
+- 🎨 Clean and modern UI design
+- 🧭 Smooth navigation with Navbar
+- 👤 Hero & About section with personal intro
+- 🛠️ Skills section with tech stack display
+- 💼 Projects section with live links
+- 🏆 Achievements section
+- 📬 Contact section
+- 📄 Downloadable Resume
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology | Purpose |
+|------------|---------|
+| React.js | Frontend Framework |
+| Vite | Build Tool |
+| Tailwind CSS | Styling |
+| JavaScript ES6+ | Programming Language |
+| HTML5 & CSS3 | Markup & Styles |
+| Git & GitHub | Version Control |
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Skills.jsx
+│   ├── Projects.jsx
+│   ├── Achievements.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── data/
+│   ├── projects.js
+│   └── site.js
+├── assets/
+│   ├── hero.png
+│   └── profile.jpeg
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/mir-sajad-01/My-Portfolio.git
+```
+
+### 2. Navigate to project folder
+```bash
+cd My-Portfolio
+```
+
+### 3. Install dependencies
+```bash
+npm install
+```
+
+### 4. Run locally
+```bash
+npm run dev
+```
+
+### 5. Build for production
+```bash
+npm run build
+```
+
+---
+
+## 📬 Contact
+
+If you'd like to connect or collaborate, feel free to reach out through the **Contact section** on the portfolio website.
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+⭐ If you like this project, give it a star on GitHub!
