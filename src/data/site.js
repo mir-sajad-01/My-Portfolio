@@ -1,0 +1,16 @@
+export const siteConfig = {
+  name: 'Sajad Bashir Mir',
+  title: 'Sajad Bashir Mir | Portfolio',
+  description: 'Portfolio of Sajad Bashir Mir showcasing MERN stack projects, skills, and practical web development work.',
+  email: 'mirsajad00011@gmail.com',
+  phoneDisplay: '+91 7780910732',
+  phoneHref: 'tel:+917780910732',
+  location: 'Srinagar, Kashmir',
+  resumePath: '/resume.pdf',
+  githubUrl: 'https://github.com/mir-sajad-01',
+  linkedinUrl: 'https://linkedin.com/in/sajad-bashir-mir',
+  heroSummary: 'Final-year CS student building web applications with the MERN stack and a focus on clean, practical work.',
+  focusAreas: ['MERN Stack', 'Web Development', 'Problem Solving', 'DSA'],
+  availability: 'Open to internships and entry-level opportunities',
+  contactFormEndpoint: 'https://formsubmit.co/ajax/mirsajad00011@gmail.com',
+}
