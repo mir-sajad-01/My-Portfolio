@@ -56,11 +56,11 @@ export const projects = [
 
 export const skills = {
   Languages: ['C', 'Java', 'JavaScript'],
-  Frontend: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'EJS'],
+  Frontend: ['React', 'HTML', 'CSS', 'Tailwind CSS'],
   Backend: ['Node.js', 'Express.js', 'REST APIs'],
   Databases: ['MongoDB', 'MySQL'],
-  Tools: ['Git', 'GitHub', 'Postman', 'VS Code', 'JWT'],
-  Concepts: ['DSA', 'OOP', 'Problem Solving'],
+  'Computer Science': ['DSA', 'OOP', 'DBMS', 'Computer Networks'],
+  Tools: ['Git', 'GitHub', 'VS Code'],
 }
 
 export const achievements = [

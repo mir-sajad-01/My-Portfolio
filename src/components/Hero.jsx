@@ -94,7 +94,7 @@ export default function Hero() {
               <div>
                 <p className="section-label mb-2">Profile</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--light)', lineHeight: 1.5 }}>
-                  Full-stack web projects with a practical focus on secure APIs, clean UI, and reliable user flows.
+                  Early-career software engineer building practical full-stack applications with thoughtful user experiences and reliable APIs.
                 </p>
               </div>
               <span

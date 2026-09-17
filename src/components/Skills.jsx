@@ -6,7 +6,7 @@ const categoryColors = {
   Backend: { pill: 'rgba(180,83,9,0.08)', border: 'rgba(180,83,9,0.16)', text: '#b45309' },
   Databases: { pill: 'rgba(14,116,144,0.08)', border: 'rgba(14,116,144,0.16)', text: '#0e7490' },
   Tools: { pill: 'rgba(75,85,99,0.08)', border: 'rgba(75,85,99,0.16)', text: '#4b5563' },
-  Concepts: { pill: 'rgba(31,41,55,0.06)', border: 'rgba(31,41,55,0.14)', text: '#1f2937' },
+  'Computer Science': { pill: 'rgba(31,41,55,0.06)', border: 'rgba(31,41,55,0.14)', text: '#1f2937' },
 }
 
 export default function Skills() {
@@ -23,7 +23,7 @@ export default function Skills() {
               color: 'var(--light)',
             }}
           >
-            Tools and technologies I use
+            Technical skills at a glance
           </h2>
         </div>
 

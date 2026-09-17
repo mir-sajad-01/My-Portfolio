@@ -3,16 +3,16 @@ import { siteConfig } from '../data/site'
 
 const strengths = [
   {
-    title: 'Full-stack builds',
-    desc: 'I build end-to-end applications with React, Node.js, Express, MongoDB, and MySQL.',
+    title: 'Full-stack development',
+    desc: 'I build web applications across React interfaces, backend APIs, databases, and deployment.',
   },
   {
-    title: 'Secure APIs',
-    desc: 'I work with JWT authentication, role-based access, validation, and RESTful API design.',
+    title: 'Practical engineering',
+    desc: 'I apply authentication, validation, REST API design, and clear user flows in project work.',
   },
   {
-    title: 'DSA foundation',
-    desc: 'I strengthen core problem-solving skills through Java, data structures, and algorithms practice.',
+    title: 'CS foundations',
+    desc: 'I strengthen problem-solving through Java, OOP, data structures, and algorithms practice.',
   },
 ]
 
@@ -33,11 +33,11 @@ export default function About() {
                 marginBottom: '1rem',
               }}
             >
-              Building reliable products from idea to deployment.
+              An early-career engineer who enjoys building useful software.
             </h3>
 
             <p style={{ color: 'var(--soft)', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '1.5rem' }}>
-              I am a GATE CSE 2026 qualified final-year Computer Science student and hackathon finalist.
+              I am a final-year Computer Science student with hands-on full-stack project experience.
               I enjoy turning product ideas into complete web applications with clear user flows and dependable APIs.
             </p>
 
@@ -60,12 +60,12 @@ export default function About() {
               className="mb-6"
               style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(1.9rem, 4vw, 2.8rem)', fontWeight: 700, color: 'var(--light)', lineHeight: 1.15 }}
             >
-              Focused on useful products and steady engineering.
+              Working toward a career in software engineering.
             </h2>
 
             <p style={{ color: 'var(--soft)', lineHeight: 1.85, marginBottom: '1rem', fontSize: '0.97rem' }}>
-              I am a final-year Computer Science student. Most of my project work is centered around practical
-              full-stack web projects, where I work across frontend UI, backend APIs, authentication, databases,
+              I am building my foundation as a software engineer through full-stack web projects and core Computer
+              Science practice. My work spans frontend UI, backend APIs, authentication, databases,
               and deployment workflows.
             </p>
             <p style={{ color: 'var(--soft)', lineHeight: 1.85, marginBottom: '1.75rem', fontSize: '0.97rem' }}>

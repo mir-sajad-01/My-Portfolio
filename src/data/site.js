@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Sajad Bashir Mir',
-  title: 'Sajad Bashir Mir | Portfolio',
-  description: 'Portfolio of Sajad Bashir Mir, a GATE CSE 2026 qualified final-year Computer Science student building full-stack MERN applications.',
+  title: 'Sajad Bashir Mir | Software Engineer',
+  description: 'Portfolio of Sajad Bashir Mir, a final-year Computer Science student and early-career software engineer focused on full-stack web development.',
   email: 'mirsajad00011@gmail.com',
   phoneDisplay: '+91 7780910732',
   phoneHref: 'tel:+917780910732',
@@ -9,9 +9,9 @@ export const siteConfig = {
   resumePath: '/resume.pdf',
   githubUrl: 'https://github.com/mir-sajad-01',
   linkedinUrl: 'https://linkedin.com/in/mirsajad01',
-  heroEyebrow: 'Full-Stack Developer | MERN Stack',
-  heroSummary: 'GATE CSE 2026 qualified final-year Computer Science student building secure, scalable web applications with React, Node.js, Express, and MongoDB.',
-  focusAreas: ['React.js', 'Node.js', 'MongoDB', 'Java + DSA'],
+  heroEyebrow: 'Software Engineer | Full-Stack Developer',
+  heroSummary: 'Building full-stack web applications with React, Node.js, Express, and MongoDB, with a strong foundation in Java, OOP, and DSA.',
+  focusAreas: ['Full-Stack Development', 'Java + OOP', 'DSA', 'MERN Stack'],
   availability: 'Open to internships and entry-level opportunities',
   contactFormEndpoint: 'https://formsubmit.co/ajax/mirsajad00011@gmail.com',
 }
