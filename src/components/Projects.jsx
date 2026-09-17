@@ -23,6 +23,7 @@ const techColors = {
   'Hugging Face': '#facc15',
   MobileNetV2: '#64748b',
   'Google Gemini API': '#2563eb',
+  'Gemini API': '#2563eb',
 }
 
 function ProjectCard({ project }) {
@@ -112,7 +113,11 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <p className="text-center mb-10" style={{ color: 'var(--soft)', fontSize: '0.95rem' }}>
+          Full-stack products built around clear user problems, secure data flows, and practical features.
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}

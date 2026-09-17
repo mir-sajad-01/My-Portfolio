@@ -3,16 +3,16 @@ import { siteConfig } from '../data/site'
 
 const strengths = [
   {
-    title: 'Practical projects',
-    desc: 'I learn best by building applications that have clear flows, useful features, and real structure.',
+    title: 'Full-stack builds',
+    desc: 'I build end-to-end applications with React, Node.js, Express, MongoDB, and MySQL.',
   },
   {
-    title: 'Problem solving',
-    desc: 'I enjoy breaking work into smaller parts and improving solutions step by step.',
+    title: 'Secure APIs',
+    desc: 'I work with JWT authentication, role-based access, validation, and RESTful API design.',
   },
   {
-    title: 'Clean execution',
-    desc: 'I care about readable code, simple UI decisions, and work that feels dependable to use.',
+    title: 'DSA foundation',
+    desc: 'I strengthen core problem-solving skills through Java, data structures, and algorithms practice.',
   },
 ]
 
@@ -33,12 +33,12 @@ export default function About() {
                 marginBottom: '1rem',
               }}
             >
-              Clear work, simple structure, steady growth.
+              Building reliable products from idea to deployment.
             </h3>
 
             <p style={{ color: 'var(--soft)', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '1.5rem' }}>
-              I prefer portfolios that feel direct and useful. My focus is on building practical applications,
-              improving how I structure projects, and getting more comfortable with real development workflows.
+              I am a GATE CSE 2026 qualified final-year Computer Science student and hackathon finalist.
+              I enjoy turning product ideas into complete web applications with clear user flows and dependable APIs.
             </p>
 
             <div className="space-y-3">
@@ -65,12 +65,12 @@ export default function About() {
 
             <p style={{ color: 'var(--soft)', lineHeight: 1.85, marginBottom: '1rem', fontSize: '0.97rem' }}>
               I am a final-year Computer Science student. Most of my project work is centered around practical
-              web projects, where I keep improving my approach to application structure, database handling,
-              APIs, and overall problem solving through hands-on builds.
+              full-stack web projects, where I work across frontend UI, backend APIs, authentication, databases,
+              and deployment workflows.
             </p>
             <p style={{ color: 'var(--soft)', lineHeight: 1.85, marginBottom: '1.75rem', fontSize: '0.97rem' }}>
-              I try to keep my work grounded: understand the problem clearly, build something usable, and
-              keep refining the details instead of overcomplicating the solution.
+              I care about readable code, useful interfaces, secure data handling, and products that solve a
+              real problem without adding unnecessary complexity.
             </p>
 
             <div className="grid gap-4 md:grid-cols-3">

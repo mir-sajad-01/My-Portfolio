@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid gap-10 lg:grid-cols-[1.25fr,0.75fr] items-start">
           <div>
-            <p className="section-label mb-3">Portfolio</p>
+            <p className="section-label mb-3">{siteConfig.heroEyebrow}</p>
             <h1
               style={{
                 fontFamily: 'Syne, sans-serif',
@@ -94,7 +94,7 @@ export default function Hero() {
               <div>
                 <p className="section-label mb-2">Profile</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--light)', lineHeight: 1.5 }}>
-                  Learning through projects, hands-on practice, and steady improvement over time.
+                  Full-stack web projects with a practical focus on secure APIs, clean UI, and reliable user flows.
                 </p>
               </div>
               <span
@@ -105,7 +105,7 @@ export default function Hero() {
                   color: 'var(--cyan)',
                 }}
               >
-                Open to opportunities
+                GATE CSE 2026
               </span>
             </div>
           </div>
