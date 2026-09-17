@@ -5,7 +5,7 @@ export default function Achievements() {
     <section id="achievements" className="py-24" style={{ background: 'var(--bg)' }}>
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="section-label mb-3">Highlights</p>
+          <p className="section-label mb-3">Achievements</p>
           <h2 style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--light)' }}>
             A few milestones
           </h2>

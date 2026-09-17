@@ -1,12 +1,49 @@
 import { useState } from 'react'
-import { Mail, GitBranch, Link2, MapPin, Phone, Download, Send } from 'lucide-react'
+import {
+  Mail,
+  GitBranch,
+  Link2,
+  MapPin,
+  Phone,
+  Download,
+  FileText,
+  Send,
+} from 'lucide-react'
 import { siteConfig } from '../data/site'
 
 const directLinks = [
-  { icon: <Mail size={18} />, label: 'Email', href: `mailto:${siteConfig.email}` },
-  { icon: <Phone size={18} />, label: 'Call', href: siteConfig.phoneHref },
-  { icon: <Link2 size={18} />, label: 'LinkedIn', href: siteConfig.linkedinUrl },
-  { icon: <Download size={18} />, label: 'Resume', href: siteConfig.resumePath, download: true },
+  {
+    icon: <Mail size={18} />,
+    label: 'Email',
+    href: `mailto:${siteConfig.email}`,
+  },
+  {
+    icon: <Phone size={18} />,
+    label: 'Call',
+    href: siteConfig.phoneHref,
+  },
+  {
+    icon: <Link2 size={18} />,
+    label: 'LinkedIn',
+    href: siteConfig.linkedinUrl,
+  },
+  {
+    icon: <GitBranch size={18} />,
+    label: 'GitHub',
+    href: siteConfig.githubUrl,
+  },
+  {
+    icon: <FileText size={18} />,
+    label: 'View Resume',
+    href: siteConfig.resumePath,
+    external: true,
+  },
+  {
+    icon: <Download size={18} />,
+    label: 'Download Resume',
+    href: siteConfig.resumePath,
+    download: true,
+  },
 ]
 
 export default function Contact() {
@@ -73,7 +110,7 @@ export default function Contact() {
                 Get in touch
               </h2>
               <p style={{ fontSize: '0.9rem', color: 'var(--soft)', lineHeight: 1.75 }}>
-                Open to internships, entry-level roles, project discussions, and thoughtful collaborations.
+                 Open to Software Engineering opportunities and project collaborations.
               </p>
             </div>
 
@@ -132,9 +169,7 @@ export default function Contact() {
               Best for opportunities and project conversations.
             </h3>
 
-            <p style={{ fontSize: '0.9rem', color: 'var(--soft)', lineHeight: 1.75, marginBottom: '1.5rem' }}>
-              Send a short message here, or use the direct links below if you prefer email, phone, or LinkedIn.
-            </p>
+           
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
@@ -207,19 +242,33 @@ export default function Contact() {
             </form>
 
             <div className="grid gap-3 sm:grid-cols-2 mt-6">
-              {directLinks.map(({ icon, label, href, download }) => (
-                <a
-                  key={label}
-                  href={href}
-                  download={download || undefined}
-                  target={download || href.startsWith('mailto:') || href.startsWith('tel:') ? undefined : '_blank'}
-                  rel={download || href.startsWith('mailto:') || href.startsWith('tel:') ? undefined : 'noreferrer'}
-                  className={label === 'Email' ? 'btn-primary justify-center' : 'btn-outline justify-center'}
-                >
-                  {icon}
-                  {label}
-                </a>
-              ))}
+              {directLinks.map(
+                ({ icon, label, href, download, external }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    download={download || undefined}
+                    target={
+                      external || (!download && !href.startsWith('mailto:') && !href.startsWith('tel:'))
+                        ? '_blank'
+                        : undefined
+                    }
+                    rel={
+                      external || (!download && !href.startsWith('mailto:') && !href.startsWith('tel:'))
+                        ? 'noreferrer'
+                        : undefined
+                    }
+                    className={
+                      label === 'Email'
+                        ? 'btn-primary justify-center'
+                        : 'btn-outline justify-center'
+                    }
+                  >
+                    {icon}
+                    {label}
+                  </a>
+                )
+              )}
             </div>
 
             <p style={{ fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center', fontFamily: 'DM Mono, monospace', marginTop: '1rem' }}>

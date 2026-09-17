@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Download, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { siteConfig } from '../data/site'
 
 const navItems = [
@@ -70,13 +70,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <a
-          href={siteConfig.resumePath}
-          download
-          className="hidden md:inline-flex btn-primary text-sm py-2 px-4"
-        >
-          <Download size={14} /> Resume
-        </a>
+
 
         <button
           className="md:hidden transition-colors"
@@ -103,9 +97,6 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          <a href={siteConfig.resumePath} download className="btn-primary text-sm py-2 px-4 self-start" onClick={() => setMenuOpen(false)}>
-            <Download size={14} /> Resume
-          </a>
         </div>
       )}
     </nav>

@@ -28,9 +28,10 @@ const techColors = {
 
 function ProjectCard({ project }) {
   return (
-    <article className="glass-card rounded-2xl p-6 h-full flex flex-col"
-      style={{ position: 'relative' }}
-    >
+    <article
+  className="glass-card rounded-2xl p-6 h-full flex flex-col"
+  style={{ position: 'relative' }}
+>
       {project.badge && (
         <div
           style={{

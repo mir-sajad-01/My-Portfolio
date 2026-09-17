@@ -111,7 +111,7 @@ export const skills = {
   Frontend: ['React', 'HTML', 'CSS', 'Tailwind CSS'],
   Backend: ['Node.js', 'Express.js', 'REST APIs'],
   Databases: ['MongoDB', 'MySQL'],
-  'Computer Science': ['DSA', 'OOP', 'DBMS', 'Computer Networks'],
+  'Computer Science': ['DSA', 'OOP', 'DBMS', ],
   Tools: ['Git', 'GitHub', 'VS Code'],
 }
 

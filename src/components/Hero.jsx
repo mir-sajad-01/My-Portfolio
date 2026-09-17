@@ -1,4 +1,4 @@
-import { GitBranch, Link2, Mail, Download } from 'lucide-react'
+import { GitBranch, Link2, Mail, Download, FileText } from 'lucide-react'
 import profileImage from '../assets/profile.jpeg'
 import { siteConfig } from '../data/site'
 
@@ -64,14 +64,29 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
-              <a href="#projects" className="btn-primary">
-                View Projects
-              </a>
-              <a href={siteConfig.resumePath} download className="btn-outline">
-                <Download size={16} />
-                Download Resume
-              </a>
-            </div>
+  <a href="#projects" className="btn-primary">
+    View Projects
+  </a>
+
+  <a
+    href={siteConfig.resumePath}
+    target="_blank"
+    rel="noreferrer"
+    className="btn-outline"
+  >
+    <FileText size={16} />
+    View Resume
+  </a>
+
+  <a
+    href={siteConfig.resumePath}
+    download
+    className="btn-outline"
+  >
+    <Download size={16} />
+    Download Resume
+  </a>
+</div>
 
             <div className="flex flex-wrap gap-3">
               {socialLinks.map(({ icon, href, label }) => (
