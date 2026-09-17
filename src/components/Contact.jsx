@@ -135,23 +135,7 @@ export default function Contact() {
               ))}
             </div>
 
-            <div>
-              <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.7rem', color: 'var(--muted)', marginBottom: '0.75rem', letterSpacing: '0.1em' }}>
-                SOCIAL
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { icon: <GitBranch size={18} />, href: siteConfig.githubUrl, label: 'GitHub' },
-                  { icon: <Link2 size={18} />, href: siteConfig.linkedinUrl, label: 'LinkedIn' },
-                  { icon: <Mail size={18} />, href: `mailto:${siteConfig.email}`, label: 'Email' },
-                ].map(({ icon, href, label }) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link">
-                    {icon}
-                    <span>{label}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
+        
           </div>
 
           <div className="glass-card rounded-2xl p-7">

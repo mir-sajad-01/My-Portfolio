@@ -1,4 +1,4 @@
-import { GitBranch, Link2, Mail } from 'lucide-react'
+
 import { siteConfig } from '../data/site'
 
 export default function Footer() {
@@ -21,20 +21,9 @@ export default function Footer() {
         </div>
 
         <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: 'var(--muted)' }}>
-          Built with React and Vite
+          © 2026 Sajad Bashir Mir
         </p>
 
-        <div className="flex items-center gap-4">
-          {[
-            { icon: <GitBranch size={16} />, href: siteConfig.githubUrl, label: 'GitHub' },
-            { icon: <Link2 size={16} />, href: siteConfig.linkedinUrl, label: 'LinkedIn' },
-            { icon: <Mail size={16} />, href: `mailto:${siteConfig.email}`, label: 'Email' },
-          ].map(({ icon, href, label }) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link" aria-label={label}>
-              {icon}
-            </a>
-          ))}
-        </div>
       </div>
     </footer>
   )
