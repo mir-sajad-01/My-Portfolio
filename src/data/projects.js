@@ -6,8 +6,8 @@ export const projects = [
     description:
       'A full-stack financial management platform that helps users track income, expenses, and transaction history through a responsive dashboard.',
     tech: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Recharts'],
-    liveUrl: 'https://fin-forge.vercel.app/',
-    githubUrl: 'https://github.com/mir-sajad-01/fin-forge',
+githubUrl: 'https://github.com/mir-sajad-01/fin-forge.git',
+liveUrl: 'https://fin-forge.vercel.app/',
     highlights: [
       'JWT authentication and protected API routes for user-specific financial data',
       'Interactive Recharts dashboard for spending trends and monthly comparisons',
@@ -23,8 +23,8 @@ export const projects = [
     description:
       'An AI interview practice platform that evaluates facial expression, speech quality, and answer content in a single interview workflow.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Gemini API', 'PyTorch'],
-    liveUrl: 'https://intervueai.vercel.app',
-    githubUrl: 'https://github.com/mir-sajad-01/Intervue-AI',
+githubUrl: 'https://github.com/mir-sajad-01/Intervue-AI.git',
+liveUrl: 'https://intervue-ai-ruby.vercel.app/',
     highlights: [
       'MobileNetV2 fine-tuned on FER2013 for real-time facial emotion detection',
       'Gemini-based scoring for relevance, fluency, and clarity with fallback handling',
@@ -42,7 +42,7 @@ export const projects = [
       'A full-stack service-booking platform connecting customers with local service providers through role-based dashboards, booking workflows, and secure APIs.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'JWT', 'Tailwind CSS'],
     liveUrl: null,
-    githubUrl: null,
+    githubUrl: 'https://github.com/Faizan-313/Local-Services-Aggregator-Platform.git',
     highlights: [
       'Role-based customer and provider dashboards with booking status workflows',
       'JWT access and refresh-token authentication with bcrypt and custom middleware',
@@ -59,8 +59,8 @@ export const projects = [
   description:
     'A deep-learning computer vision system that recognizes seven human facial expressions using a fine-tuned MobileNetV2 model trained on the FER2013 dataset.',
   tech: ['Python', 'PyTorch', 'MobileNetV2', 'OpenCV', 'Gradio', 'Hugging Face'],
-  liveUrl: 'YOUR_HUGGING_FACE_URL',
-  githubUrl: 'YOUR_FACIAL_EXPRESSION_GITHUB_URL',
+  liveUrl: null,
+  githubUrl: 'https://github.com/mir-sajad-01/Facial-Expression-Model.git',
   highlights: [
     'Fine-tuned MobileNetV2 using transfer learning',
     'Trained and evaluated on the FER2013 facial-expression dataset',
@@ -77,8 +77,8 @@ export const projects = [
   description:
     'A full-stack task management application for creating, organizing, updating, and tracking tasks with secure authentication and a responsive dashboard.',
   tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
-  liveUrl: 'YOUR_TASK_MANAGER_LIVE_URL',
-  githubUrl: 'YOUR_TASK_MANAGER_GITHUB_URL',
+  githubUrl: 'https://github.com/mir-sajad-01/Task-Manager.git',
+liveUrl: 'https://task-manager-w5yw.onrender.com',
   highlights: [
     'JWT-based authentication with protected routes',
     'Complete task CRUD operations with search and status filtering',
@@ -94,8 +94,8 @@ export const projects = [
   description:
     'A full-stack accommodation platform that allows users to discover, create, and manage property listings with reviews, ratings, and booking functionality.',
   tech: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'Tailwind CSS', 'Bootstrap', 'Cloudinary'],
-  liveUrl: 'YOUR_WANDERLUST_LIVE_URL',
-  githubUrl: 'YOUR_WANDERLUST_GITHUB_URL',
+  liveUrl: null,
+  githubUrl: 'https://github.com/mir-sajad-01/WanderLust__.git',
   highlights: [
     'User authentication with role-based functionality',
     'Property listing creation, management, and image uploads',
