@@ -17,7 +17,7 @@ export const siteConfig = {
 
   // Hero
 heroSummary:
-  'Computer Science graduate and Software Engineer focused on building reliable full-stack applications with React.js, Node.js, Express.js, and MongoDB.',
+  'Computer Science graduate and Full-Stack Developer specializing in React.js, Node.js, Express.js, and MongoDB, with a strong foundation in Java, DSA, OOP, and core CS fundamentals.',
 
   focusAreas: ['Java', 'DSA & OOP', 'MERN Stack', 'REST APIs'],
 

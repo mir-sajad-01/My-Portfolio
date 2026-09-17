@@ -55,7 +55,7 @@ liveUrl: 'https://intervue-ai-ruby.vercel.app/',
   {
   id: 4,
   title: 'Facial Expression Recognition',
-  date: '2025',
+  date: 'April 2026',
   description:
     'A deep-learning computer vision system that recognizes seven human facial expressions using a fine-tuned MobileNetV2 model trained on the FER2013 dataset.',
   tech: ['Python', 'PyTorch', 'MobileNetV2', 'OpenCV', 'Gradio', 'Hugging Face'],
@@ -73,7 +73,7 @@ liveUrl: 'https://intervue-ai-ruby.vercel.app/',
   {
   id: 5,
   title: 'Task Manager',
-  date: '2025',
+  date: 'May 2026',
   description:
     'A full-stack task management application for creating, organizing, updating, and tracking tasks with secure authentication and a responsive dashboard.',
   tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
@@ -90,7 +90,7 @@ liveUrl: 'https://task-manager-w5yw.onrender.com',
 {
   id: 6,
   title: 'Wanderlust',
-  date: '2025',
+  date: 'August 2025',
   description:
     'A full-stack accommodation platform that allows users to discover, create, and manage property listings with reviews, ratings, and booking functionality.',
   tech: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'Tailwind CSS', 'Bootstrap', 'Cloudinary'],

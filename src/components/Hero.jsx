@@ -1,143 +1,156 @@
-import { GitBranch, Link2, Mail, Download, FileText } from 'lucide-react'
+import { GitBranch, Link2, Mail, FileText, ArrowDownRight } from 'lucide-react'
 import profileImage from '../assets/profile.jpeg'
 import { siteConfig } from '../data/site'
 
 const socialLinks = [
-  { icon: <GitBranch size={16} />, href: siteConfig.githubUrl, label: 'GitHub' },
-  { icon: <Link2 size={16} />, href: siteConfig.linkedinUrl, label: 'LinkedIn' },
-  { icon: <Mail size={16} />, href: `mailto:${siteConfig.email}`, label: 'Email' },
+  {
+    icon: <GitBranch size={16} />,
+    href: siteConfig.githubUrl,
+    label: 'GitHub',
+  },
+  {
+    icon: <Link2 size={16} />,
+    href: siteConfig.linkedinUrl,
+    label: 'LinkedIn',
+  },
+  {
+    icon: <Mail size={16} />,
+    href: `mailto:${siteConfig.email}`,
+    label: 'Email',
+  },
 ]
 
 export default function Hero() {
   return (
-    <section id="home" className="py-24 md:py-28" style={{ background: 'var(--bg)' }}>
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.25fr,0.75fr] items-start">
-          <div>
-            <p className="section-label mb-3">SOFTWARE ENGINEER</p>
+    <section
+      id="home"
+      className="flex min-h-[calc(100vh-80px)] items-center py-16 md:py-20 lg:py-24"
+      style={{ background: 'var(--bg)' }}
+    >
+      <div className="mx-auto w-full max-w-6xl px-6">
 
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+
+          {/* LEFT SIDE */}
+          <div className="max-w-3xl">
+
+            {/* Eyebrow */}
+            <p className="section-label mb-4">
+              SOFTWARE ENGINEER
+            </p>
+
+            {/* Name */}
             <h1
+              className="mb-3 font-bold leading-[0.98] tracking-[-0.045em]"
               style={{
                 fontFamily: 'Syne, sans-serif',
-                fontSize: 'clamp(2.0rem, 5vw, 4rem)',
-                fontWeight: 700,
-                lineHeight: 1.05,
+                fontSize: 'clamp(3rem, 6vw, 5.2rem)',
                 color: 'var(--light)',
-                maxWidth: 760,
-                marginBottom: '0.6rem',
               }}
             >
               Sajad Bashir Mir
             </h1>
 
+            {/* Role */}
             <h2
+              className="mb-5 font-semibold"
               style={{
                 fontFamily: 'Syne, sans-serif',
-                fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
-                fontWeight: 600,
-                lineHeight: 1.3,
+                fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
                 color: 'var(--cyan)',
-                marginBottom: '1rem',
               }}
             >
               Full-Stack Developer
             </h2>
 
+            {/* Bio */}
             <p
-              style={{
-                color: 'var(--soft)',
-                fontSize: '0.98rem',
-                lineHeight: 1.8,
-                maxWidth: 640,
-                marginBottom: '1.75rem',
-              }}
+              className="mb-7 max-w-2xl text-base leading-8 md:text-[17px]"
+              style={{ color: 'var(--soft)' }}
             >
-              {siteConfig.heroSummary}
+              Computer Science graduate and Full-Stack Developer specializing
+              in React.js, Node.js, Express.js, and MongoDB, with a strong
+              foundation in Java, DSA, OOP, and core CS fundamentals.
             </p>
 
-            <div className="flex flex-wrap gap-2 mb-8">
-              {siteConfig.focusAreas.map(item => (
+            {/* Skill Tags */}
+            <div className="mb-8 flex flex-wrap gap-2">
+              {siteConfig.focusAreas.map((item) => (
                 <span key={item} className="skill-pill">
                   {item}
                 </span>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-8">
-  <a href="#projects" className="btn-primary">
-    View Projects
-  </a>
+            {/* CTAs */}
+            <div className="mb-7 flex flex-wrap gap-3">
 
-  <a
-    href={siteConfig.resumePath}
-    target="_blank"
-    rel="noreferrer"
-    className="btn-outline"
-  >
-    <FileText size={16} />
-    View Resume
-  </a>
+              <a
+                href="#projects"
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                View Projects
+                <ArrowDownRight size={16} />
+              </a>
 
-  <a
-    href={siteConfig.resumePath}
-    download
-    className="btn-outline"
-  >
-    <Download size={16} />
-    Download Resume
-  </a>
-</div>
+              <a
+                href={siteConfig.resumePath}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-outline inline-flex items-center gap-2"
+              >
+                <FileText size={16} />
+                Resume
+              </a>
 
-            <div className="flex flex-wrap gap-3">
+            </div>
+
+            {/* Social Links */}
+            <div className="flex flex-wrap items-center gap-2">
               {socialLinks.map(({ icon, href, label }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link">
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="social-link inline-flex items-center gap-2"
+                >
                   {icon}
                   <span>{label}</span>
                 </a>
               ))}
             </div>
+
           </div>
 
-          <div className="glass-card p-5 md:p-6">
-            <img
-              src={profileImage}
-              alt={siteConfig.name}
+
+          {/* RIGHT SIDE — PHOTO */}
+          <div className="flex justify-center lg:justify-end">
+
+            <div className="w-full max-w-[440px] rounded-[22px] border p-3 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
               style={{
-                width: '100%',
-                height: 'clamp(270px, 30vw, 340px)',
-                objectFit: 'cover',
-                objectPosition: 'center 18%',
-                borderRadius: 14,
-                marginBottom: '0.9rem',
-              }}
-            />
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '1rem',
-                flexWrap: 'wrap',
+                background: 'rgba(255,255,255,0.72)',
+                borderColor: 'var(--border)',
               }}
             >
-              <div>
-                <p className="section-label mb-2">Profile</p>
-                <p style={{ fontSize: '0.92rem', color: 'var(--light)', lineHeight: 1.5 }}>
-                  Computer Science graduate with hands-on experience across full-stack development, Java, and problem solving. Interested in building scalable web applications and learning modern software engineering practices.
-                </p>
+
+              {/* Photo */}
+              <div className="relative overflow-hidden rounded-[16px] bg-[#eef2f4]">
+
+                <img
+                  src={profileImage}
+                  alt="Sajad Bashir Mir"
+                  className="block h-[380px] w-full object-cover object-[center_18%] sm:h-[440px] lg:h-[490px]"
+                />
+
               </div>
-              <span
-                className="skill-pill"
-                style={{
-                  background: '#eef6f5',
-                  borderColor: '#bfd9d5',
-                  color: 'var(--cyan)',
-                }}
-              >
-                GATE CSE 2026
-              </span>
+
+             
+
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
