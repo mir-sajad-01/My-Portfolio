@@ -39,7 +39,7 @@ export const projects = [
     title: 'Local Services Platform',
     date: 'July 2025',
     description:
-      'A full-stack booking platform built with a four-member team during a 24-hour hackathon for customers and service providers.',
+      'A full-stack service-booking platform connecting customers with local service providers through role-based dashboards, booking workflows, and secure APIs.',
     tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'JWT', 'Tailwind CSS'],
     liveUrl: null,
     githubUrl: null,
@@ -52,6 +52,58 @@ export const projects = [
     color: '#b45309',
     badge: 'Hackathon',
   },
+  {
+  id: 4,
+  title: 'Facial Expression Recognition',
+  date: '2025',
+  description:
+    'A deep-learning computer vision system that recognizes seven human facial expressions using a fine-tuned MobileNetV2 model trained on the FER2013 dataset.',
+  tech: ['Python', 'PyTorch', 'MobileNetV2', 'OpenCV', 'Gradio', 'Hugging Face'],
+  liveUrl: 'YOUR_HUGGING_FACE_URL',
+  githubUrl: 'YOUR_FACIAL_EXPRESSION_GITHUB_URL',
+  highlights: [
+    'Fine-tuned MobileNetV2 using transfer learning',
+    'Trained and evaluated on the FER2013 facial-expression dataset',
+    'Real-time facial-expression prediction with a deployed Gradio interface',
+  ],
+  featured: true,
+  color: '#7c3aed',
+  badge: 'ML',
+},
+  {
+  id: 5,
+  title: 'Task Manager',
+  date: '2025',
+  description:
+    'A full-stack task management application for creating, organizing, updating, and tracking tasks with secure authentication and a responsive dashboard.',
+  tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
+  liveUrl: 'YOUR_TASK_MANAGER_LIVE_URL',
+  githubUrl: 'YOUR_TASK_MANAGER_GITHUB_URL',
+  highlights: [
+    'JWT-based authentication with protected routes',
+    'Complete task CRUD operations with search and status filtering',
+    'Dashboard with task statistics and progress tracking',
+  ],
+  featured: true,
+  color: '#2563eb',
+},
+{
+  id: 6,
+  title: 'Wanderlust',
+  date: '2025',
+  description:
+    'A full-stack accommodation platform that allows users to discover, create, and manage property listings with reviews, ratings, and booking functionality.',
+  tech: ['Node.js', 'Express.js', 'MongoDB', 'EJS', 'Tailwind CSS', 'Bootstrap', 'Cloudinary'],
+  liveUrl: 'YOUR_WANDERLUST_LIVE_URL',
+  githubUrl: 'YOUR_WANDERLUST_GITHUB_URL',
+  highlights: [
+    'User authentication with role-based functionality',
+    'Property listing creation, management, and image uploads',
+    'Reviews, ratings, and booking functionality',
+  ],
+  featured: true,
+  color: '#b91c1c',
+},
 ]
 
 export const skills = {
