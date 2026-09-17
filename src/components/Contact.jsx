@@ -1,265 +1,305 @@
-import { useState } from 'react'
-import {
-  Mail,
-  GitBranch,
-  Link2,
-  MapPin,
-  Phone,
-  Download,
-  FileText,
-  Send,
-} from 'lucide-react'
+import { Mail, Phone, MapPin, GitBranch, FileText, Send } from 'lucide-react'
 import { siteConfig } from '../data/site'
 
-const directLinks = [
-  {
-    icon: <Mail size={18} />,
-    label: 'Email',
-    href: `mailto:${siteConfig.email}`,
-  },
-  {
-    icon: <Phone size={18} />,
-    label: 'Call',
-    href: siteConfig.phoneHref,
-  },
-  {
-    icon: <Link2 size={18} />,
-    label: 'LinkedIn',
-    href: siteConfig.linkedinUrl,
-  },
-  {
-    icon: <GitBranch size={18} />,
-    label: 'GitHub',
-    href: siteConfig.githubUrl,
-  },
-  {
-    icon: <FileText size={18} />,
-    label: 'View Resume',
-    href: siteConfig.resumePath,
-    external: true,
-  },
-  {
-    icon: <Download size={18} />,
-    label: 'Download Resume',
-    href: siteConfig.resumePath,
-    download: true,
-  },
-]
-
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState(null)
-  const [errorMessage, setErrorMessage] = useState('')
-
-  const handleSubmit = async event => {
-    event.preventDefault()
-
-    const trimmed = {
-      name: form.name.trim(),
-      email: form.email.trim(),
-      message: form.message.trim(),
-    }
-
-    if (!trimmed.name || !trimmed.email || !trimmed.message) {
-      setStatus('error')
-      setErrorMessage('Please fill in your name, email, and message.')
-      return
-    }
-
-    setStatus('sending')
-    setErrorMessage('')
-
-    try {
-      const body = new FormData()
-      body.append('name', trimmed.name)
-      body.append('email', trimmed.email)
-      body.append('message', trimmed.message)
-      body.append('_subject', `Portfolio message for ${siteConfig.name}`)
-      body.append('_template', 'table')
-      body.append('_captcha', 'false')
-
-      const res = await fetch(siteConfig.contactFormEndpoint, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body,
-      })
-
-      const result = await res.json().catch(() => null)
-
-      if (!res.ok || result?.success === 'false' || result?.success === false) {
-        throw new Error(result?.message || 'Submission failed')
-      }
-
-      setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
-    } catch {
-      setStatus('error')
-      setErrorMessage('Message could not be sent right now. You can still contact me directly by email or phone.')
-    }
-  }
-
   return (
-    <section id="contact" className="py-24" style={{ background: 'var(--bg)' }}>
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr,1.1fr] items-start">
-          <div className="space-y-6">
-            <p className="section-label">Contact</p>
+    <section
+      id="contact"
+      className="py-20 md:py-24"
+      style={{ background: 'var(--bg)' }}
+    >
+      <div className="mx-auto max-w-6xl px-6">
 
-            <div>
-              <h2 style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(1.9rem, 4vw, 2.6rem)', fontWeight: 700, color: 'var(--light)', lineHeight: 1.15, marginBottom: '0.9rem' }}>
-                Get in touch
-              </h2>
-              <p style={{ fontSize: '0.9rem', color: 'var(--soft)', lineHeight: 1.75 }}>
-                 Open to Software Engineering opportunities and project collaborations.
-              </p>
-            </div>
+        {/* Heading */}
+        <div className="mb-12 max-w-2xl">
+          <p className="section-label mb-4">
+            CONTACT
+          </p>
 
-            <div className="space-y-3">
-              {[
-                { icon: <Mail size={16} />, label: siteConfig.email, href: `mailto:${siteConfig.email}` },
-                { icon: <Phone size={16} />, label: siteConfig.phoneDisplay, href: siteConfig.phoneHref },
-                { icon: <MapPin size={16} />, label: siteConfig.location, href: null },
-              ].map(({ icon, label, href }) => (
-                <div key={label} className="meta-chip" style={{ width: '100%', justifyContent: 'flex-start', borderRadius: 12, padding: '0.8rem 0.9rem' }}>
-                  <div style={{ color: 'var(--cyan)', display: 'flex' }}>{icon}</div>
-                  {href ? (
-                    <a href={href} style={{ fontSize: '0.88rem', color: 'var(--soft)', textDecoration: 'none' }}>
-                      {label}
-                    </a>
-                  ) : (
-                    <span style={{ fontSize: '0.88rem', color: 'var(--soft)', fontFamily: 'Outfit, sans-serif' }}>
-                      {label}
-                    </span>
-                  )}
+          <h2
+            className="mb-4 font-bold tracking-tight"
+            style={{
+              fontFamily: 'Syne, sans-serif',
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              color: 'var(--light)',
+            }}
+          >
+            Get in touch
+          </h2>
+
+          <p
+            className="max-w-xl text-base leading-7"
+            style={{ color: 'var(--soft)' }}
+          >
+            Open to Software Engineering opportunities and project
+            collaborations.
+          </p>
+        </div>
+
+
+        {/* Main Contact Grid */}
+        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
+
+          {/* ================= LEFT ================= */}
+          <div>
+
+            <div className="space-y-4">
+
+              {/* Email */}
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="group flex items-center gap-4 rounded-xl border bg-white p-4 transition hover:-translate-y-0.5 hover:shadow-sm"
+                style={{ borderColor: 'var(--border)' }}
+              >
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                  style={{
+                    background: '#eef7f6',
+                    color: 'var(--cyan)',
+                  }}
+                >
+                  <Mail size={18} />
                 </div>
-              ))}
+
+                <div>
+                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
+                    Email
+                  </p>
+
+                  <p
+                    className="text-sm md:text-[15px]"
+                    style={{ color: 'var(--light)' }}
+                  >
+                    {siteConfig.email}
+                  </p>
+                </div>
+              </a>
+
+
+              {/* Phone */}
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="group flex items-center gap-4 rounded-xl border bg-white p-4 transition hover:-translate-y-0.5 hover:shadow-sm"
+                style={{ borderColor: 'var(--border)' }}
+              >
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                  style={{
+                    background: '#eef7f6',
+                    color: 'var(--cyan)',
+                  }}
+                >
+                  <Phone size={18} />
+                </div>
+
+                <div>
+                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
+                    Phone
+                  </p>
+
+                  <p
+                    className="text-sm md:text-[15px]"
+                    style={{ color: 'var(--light)' }}
+                  >
+                    {siteConfig.phone}
+                  </p>
+                </div>
+              </a>
+
+
+              {/* Location */}
+              <div
+                className="flex items-center gap-4 rounded-xl border bg-white p-4"
+                style={{ borderColor: 'var(--border)' }}
+              >
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                  style={{
+                    background: '#eef7f6',
+                    color: 'var(--cyan)',
+                  }}
+                >
+                  <MapPin size={18} />
+                </div>
+
+                <div>
+                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
+                    Location
+                  </p>
+
+                  <p
+                    className="text-sm md:text-[15px]"
+                    style={{ color: 'var(--light)' }}
+                  >
+                    Srinagar, Kashmir
+                  </p>
+                </div>
+              </div>
+
             </div>
 
-        
+
+            {/* Connect */}
+            <div className="mt-8">
+
+              <p className="section-label mb-4">
+                CONNECT
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+
+                <a
+                  href={siteConfig.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-outline inline-flex items-center gap-2"
+                >
+                  <span className="text-sm font-bold">in</span>
+                  LinkedIn
+                </a>
+
+                <a
+                  href={siteConfig.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-outline inline-flex items-center gap-2"
+                >
+                  <GitBranch size={16} />
+                  GitHub
+                </a>
+
+              </div>
+
+            </div>
+
+
+            {/* Resume */}
+            <div className="mt-7">
+
+              <a
+                href={siteConfig.resumePath}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium transition hover:opacity-70"
+                style={{ color: 'var(--cyan)' }}
+              >
+                <FileText size={16} />
+                View Resume
+              </a>
+
+            </div>
+
           </div>
 
-          <div className="glass-card rounded-2xl p-7">
-            <p className="section-label mb-3">Send Message</p>
+
+          {/* ================= RIGHT ================= */}
+          <div
+            className="rounded-2xl border bg-white p-6 md:p-8"
+            style={{ borderColor: 'var(--border)' }}
+          >
+
+            <p className="section-label mb-4">
+              SEND A MESSAGE
+            </p>
+
             <h3
+              className="mb-7 font-semibold leading-tight"
               style={{
                 fontFamily: 'Syne, sans-serif',
-                fontSize: '1.4rem',
-                fontWeight: 700,
+                fontSize: 'clamp(1.5rem, 3vw, 2.1rem)',
                 color: 'var(--light)',
-                lineHeight: 1.2,
-                marginBottom: '0.9rem',
               }}
             >
-              Best for opportunities and project conversations.
+              Let's start a conversation.
             </h3>
 
-           
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid gap-4 md:grid-cols-2">
+            <form
+              action="https://formsubmit.co/ajax/mirsajad00011@gmail.com"
+              method="POST"
+              className="space-y-5"
+            >
+
+              {/* Name + Email */}
+              <div className="grid gap-5 sm:grid-cols-2">
+
                 <div>
-                  <label style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', color: 'var(--muted)', letterSpacing: '0.08em', display: 'block', marginBottom: '0.4rem' }}>
-                    NAME
+                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-500">
+                    Name
                   </label>
+
                   <input
-                    className="form-input"
+                    type="text"
+                    name="name"
+                    required
                     placeholder="Your name"
-                    value={form.name}
-                    onChange={e => setForm(current => ({ ...current, name: e.target.value }))}
+                    className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition focus:ring-2"
+                    style={{
+                      borderColor: 'var(--border)',
+                      color: 'var(--light)',
+                    }}
                   />
                 </div>
+
 
                 <div>
-                  <label style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', color: 'var(--muted)', letterSpacing: '0.08em', display: 'block', marginBottom: '0.4rem' }}>
-                    EMAIL
+                  <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-500">
+                    Email
                   </label>
+
                   <input
-                    className="form-input"
                     type="email"
+                    name="email"
+                    required
                     placeholder="your@email.com"
-                    value={form.email}
-                    onChange={e => setForm(current => ({ ...current, email: e.target.value }))}
+                    className="w-full rounded-xl border px-4 py-3 text-sm outline-none transition focus:ring-2"
+                    style={{
+                      borderColor: 'var(--border)',
+                      color: 'var(--light)',
+                    }}
                   />
                 </div>
+
               </div>
 
+
+              {/* Message */}
               <div>
-                <label style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', color: 'var(--muted)', letterSpacing: '0.08em', display: 'block', marginBottom: '0.4rem' }}>
-                  MESSAGE
+
+                <label className="mb-2 block text-xs font-medium uppercase tracking-wider text-gray-500">
+                  Message
                 </label>
+
                 <textarea
-                  className="form-input"
-                  rows={5}
+                  name="message"
+                  required
+                  rows="6"
                   placeholder="Tell me about the role, project, or opportunity..."
-                  value={form.message}
-                  onChange={e => setForm(current => ({ ...current, message: e.target.value }))}
-                  style={{ resize: 'vertical' }}
+                  className="w-full resize-none rounded-xl border px-4 py-3 text-sm outline-none transition focus:ring-2"
+                  style={{
+                    borderColor: 'var(--border)',
+                    color: 'var(--light)',
+                  }}
                 />
+
               </div>
 
+
+              {/* Submit */}
               <button
                 type="submit"
-                disabled={status === 'sending'}
-                className="btn-primary w-full justify-center"
-                style={{ opacity: status === 'sending' ? 0.7 : 1 }}
+                className="btn-primary flex w-full items-center justify-center gap-2 py-3.5"
               >
-                {status === 'sending' ? (
-                  'Sending...'
-                ) : status === 'sent' ? (
-                  'Message sent'
-                ) : (
-                  <><Send size={15} /> Send Message</>
-                )}
+                <Send size={16} />
+                Send Message
               </button>
 
-              {status === 'sent' && (
-                <p style={{ fontSize: '0.82rem', color: 'var(--cyan)', textAlign: 'center' }}>
-                  Your message has been submitted successfully.
-                </p>
-              )}
-
-              {status === 'error' && (
-                <p style={{ fontSize: '0.82rem', color: '#c2410c', textAlign: 'center' }}>
-                  {errorMessage}
-                </p>
-              )}
             </form>
 
-            <div className="grid gap-3 sm:grid-cols-2 mt-6">
-              {directLinks.map(
-                ({ icon, label, href, download, external }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    download={download || undefined}
-                    target={
-                      external || (!download && !href.startsWith('mailto:') && !href.startsWith('tel:'))
-                        ? '_blank'
-                        : undefined
-                    }
-                    rel={
-                      external || (!download && !href.startsWith('mailto:') && !href.startsWith('tel:'))
-                        ? 'noreferrer'
-                        : undefined
-                    }
-                    className={
-                      label === 'Email'
-                        ? 'btn-primary justify-center'
-                        : 'btn-outline justify-center'
-                    }
-                  >
-                    {icon}
-                    {label}
-                  </a>
-                )
-              )}
-            </div>
-
-            <p style={{ fontSize: '0.75rem', color: 'var(--muted)', textAlign: 'center', fontFamily: 'DM Mono, monospace', marginTop: '1rem' }}>
-              If this is the first form submission, confirm the FormSubmit activation email once.
-            </p>
           </div>
+
         </div>
+
       </div>
     </section>
   )
