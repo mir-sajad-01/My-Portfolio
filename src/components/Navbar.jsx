@@ -6,7 +6,7 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Highlights', href: '#achievements' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -54,7 +54,7 @@ export default function Navbar() {
             {siteConfig.name}
           </span>
           <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.66rem', color: 'var(--muted)' }}>
-            Portfolio
+            Software Engineer
           </span>
         </a>
 

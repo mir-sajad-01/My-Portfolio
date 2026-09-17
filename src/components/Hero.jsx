@@ -14,20 +14,34 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid gap-10 lg:grid-cols-[1.25fr,0.75fr] items-start">
           <div>
-            <p className="section-label mb-3">{siteConfig.heroEyebrow}</p>
+            <p className="section-label mb-3">SOFTWARE ENGINEER</p>
+
             <h1
               style={{
                 fontFamily: 'Syne, sans-serif',
-                fontSize: 'clamp(1.7rem, 3vw, 2.4rem)',
+                fontSize: 'clamp(2.0rem, 5vw, 4rem)',
                 fontWeight: 700,
-                lineHeight: 1.2,
+                lineHeight: 1.05,
                 color: 'var(--light)',
-                maxWidth: 640,
-                marginBottom: '0.85rem',
+                maxWidth: 760,
+                marginBottom: '0.6rem',
               }}
             >
-              {siteConfig.name}
+              Sajad Bashir Mir
             </h1>
+
+            <h2
+              style={{
+                fontFamily: 'Syne, sans-serif',
+                fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
+                fontWeight: 600,
+                lineHeight: 1.3,
+                color: 'var(--cyan)',
+                marginBottom: '1rem',
+              }}
+            >
+              Full-Stack Developer
+            </h2>
 
             <p
               style={{
@@ -94,7 +108,7 @@ export default function Hero() {
               <div>
                 <p className="section-label mb-2">Profile</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--light)', lineHeight: 1.5 }}>
-                  Early-career software engineer building practical full-stack applications with thoughtful user experiences and reliable APIs.
+                  Software Engineer focused on building practical full-stack applications, designing reliable APIs, and solving problems with strong computer science fundamentals.
                 </p>
               </div>
               <span

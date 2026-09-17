@@ -10,8 +10,9 @@ export const siteConfig = {
   githubUrl: 'https://github.com/mir-sajad-01',
   linkedinUrl: 'https://linkedin.com/in/mirsajad01',
   heroEyebrow: 'Software Engineer | Full-Stack Developer',
-  heroSummary: 'Building full-stack web applications with React, Node.js, Express, and MongoDB, with a strong foundation in Java, OOP, and DSA.',
-  focusAreas: ['Full-Stack Development', 'Java + OOP', 'DSA', 'MERN Stack'],
+  heroSummary:
+  'I build full-stack web applications with React, Node.js, Express, and MongoDB, backed by a strong foundation in Java, OOP, DSA, and computer science fundamentals.',
+  focusAreas: ['Java', 'DSA & OOP', 'MERN Stack', 'REST APIs'],
   availability: 'Open to internships and entry-level opportunities',
   contactFormEndpoint: 'https://formsubmit.co/ajax/mirsajad00011@gmail.com',
 }

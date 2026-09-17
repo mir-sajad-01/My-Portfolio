@@ -37,8 +37,7 @@ export default function About() {
             </h3>
 
             <p style={{ color: 'var(--soft)', lineHeight: 1.8, fontSize: '0.95rem', marginBottom: '1.5rem' }}>
-              I am a final-year Computer Science student with hands-on full-stack project experience.
-              I enjoy turning product ideas into complete web applications with clear user flows and dependable APIs.
+              I am a Computer Science graduate and aspiring Software Engineer with hands-on experience building full-stack web applications. I work primarily with Java, JavaScript, React, Node.js, Express, and MongoDB, while strengthening my problem-solving skills through DSA, OOP, and core computer science fundamentals.
             </p>
 
             <div className="space-y-3">
