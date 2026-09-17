@@ -123,7 +123,7 @@ export default function Hero() {
               <div>
                 <p className="section-label mb-2">Profile</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--light)', lineHeight: 1.5 }}>
-                  Software Engineer focused on building practical full-stack applications, designing reliable APIs, and solving problems with strong computer science fundamentals.
+                  Computer Science graduate with hands-on experience across full-stack development, Java, and problem solving. Interested in building scalable web applications and learning modern software engineering practices.
                 </p>
               </div>
               <span

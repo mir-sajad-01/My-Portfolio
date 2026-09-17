@@ -16,8 +16,8 @@ export const siteConfig = {
   linkedinUrl: 'https://www.linkedin.com/in/mirsajad01/',
 
   // Hero
-  heroSummary:
-    'I build full-stack web applications with React.js, Node.js, Express.js, and MongoDB, backed by a strong foundation in Java, DSA, OOP, and core computer science fundamentals.',
+heroSummary:
+  'Computer Science graduate and Software Engineer focused on building reliable full-stack applications with React.js, Node.js, Express.js, and MongoDB.',
 
   focusAreas: ['Java', 'DSA & OOP', 'MERN Stack', 'REST APIs'],
 
