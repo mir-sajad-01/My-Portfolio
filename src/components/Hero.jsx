@@ -50,13 +50,7 @@ export default function Hero() {
               foundation in Java, DSA, OOP, and core CS fundamentals.
             </p>
 
-            <div className="mb-8 flex flex-wrap gap-2">
-              {siteConfig.focusAreas.map((item) => (
-                <span key={item} className="skill-pill">
-                  {item}
-                </span>
-              ))}
-            </div>
+    
 
             <div className="flex flex-wrap gap-3">
               <a
