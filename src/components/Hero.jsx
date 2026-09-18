@@ -1,35 +1,16 @@
-import { GitBranch, Link2, Mail, FileText, ArrowDownRight } from 'lucide-react'
+import { FileText, ArrowDownRight } from 'lucide-react'
 import profileImage from '../assets/profile.jpeg'
 import { siteConfig } from '../data/site'
-
-const socialLinks = [
-  {
-    icon: <GitBranch size={16} />,
-    href: siteConfig.githubUrl,
-    label: 'GitHub',
-  },
-  {
-    icon: <Link2 size={16} />,
-    href: siteConfig.linkedinUrl,
-    label: 'LinkedIn',
-  },
-  {
-    icon: <Mail size={16} />,
-    href: `mailto:${siteConfig.email}`,
-    label: 'Email',
-  },
-]
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="flex min-h-[calc(100vh-80px)] items-center py-16 md:py-20 lg:py-24"
+      className="px-6 py-12 sm:py-14 lg:py-16"
       style={{ background: 'var(--bg)' }}
     >
-      <div className="mx-auto w-full max-w-6xl px-6">
-
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
 
           {/* LEFT SIDE */}
           <div className="max-w-3xl">
@@ -83,8 +64,7 @@ export default function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="mb-7 flex flex-wrap gap-3">
-
+            <div className="flex flex-wrap gap-3">
               <a
                 href="#projects"
                 className="btn-primary inline-flex items-center gap-2"
@@ -102,53 +82,26 @@ export default function Hero() {
                 <FileText size={16} />
                 Resume
               </a>
-
             </div>
-
-            {/* Social Links */}
-            <div className="flex flex-wrap items-center gap-2">
-              {socialLinks.map(({ icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="social-link inline-flex items-center gap-2"
-                >
-                  {icon}
-                  <span>{label}</span>
-                </a>
-              ))}
-            </div>
-
           </div>
-
 
           {/* RIGHT SIDE — PHOTO */}
           <div className="flex justify-center lg:justify-end">
-
-            <div className="w-full max-w-[440px] rounded-[22px] border p-3 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
+            <div
+              className="w-full max-w-[440px] rounded-[22px] border p-3 shadow-[0_20px_50px_rgba(15,23,42,0.08)]"
               style={{
                 background: 'rgba(255,255,255,0.72)',
                 borderColor: 'var(--border)',
               }}
             >
-
-              {/* Photo */}
-              <div className="relative overflow-hidden rounded-[16px] bg-[#eef2f4]">
-
+              <div className="overflow-hidden rounded-[16px] bg-[#eef2f4]">
                 <img
                   src={profileImage}
                   alt="Sajad Bashir Mir"
-                  className="block h-[380px] w-full object-cover object-[center_18%] sm:h-[440px] lg:h-[490px]"
+                  className="block h-[360px] w-full object-cover object-[center_18%] sm:h-[440px] lg:h-[490px]"
                 />
-
               </div>
-
-             
-
             </div>
-
           </div>
 
         </div>
@@ -156,6 +109,3 @@ export default function Hero() {
     </section>
   )
 }
-
-
-
