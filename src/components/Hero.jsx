@@ -6,21 +6,19 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="px-6 py-12 sm:py-14 lg:py-16"
+      className="px-6 pb-12 pt-2 sm:pb-14 sm:pt-8 lg:pb-16 lg:pt-10"
       style={{ background: 'var(--bg)' }}
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-16">
 
           {/* LEFT SIDE */}
           <div className="max-w-3xl">
 
-            {/* Eyebrow */}
             <p className="section-label mb-4">
               SOFTWARE ENGINEER
             </p>
 
-            {/* Name */}
             <h1
               className="mb-3 font-bold leading-[0.98] tracking-[-0.045em]"
               style={{
@@ -32,7 +30,6 @@ export default function Hero() {
               Sajad Bashir Mir
             </h1>
 
-            {/* Role */}
             <h2
               className="mb-5 font-semibold"
               style={{
@@ -44,7 +41,6 @@ export default function Hero() {
               Full-Stack Developer
             </h2>
 
-            {/* Bio */}
             <p
               className="mb-7 max-w-2xl text-base leading-8 md:text-[17px]"
               style={{ color: 'var(--soft)' }}
@@ -54,7 +50,6 @@ export default function Hero() {
               foundation in Java, DSA, OOP, and core CS fundamentals.
             </p>
 
-            {/* Skill Tags */}
             <div className="mb-8 flex flex-wrap gap-2">
               {siteConfig.focusAreas.map((item) => (
                 <span key={item} className="skill-pill">
@@ -63,7 +58,6 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* CTAs */}
             <div className="flex flex-wrap gap-3">
               <a
                 href="#projects"
